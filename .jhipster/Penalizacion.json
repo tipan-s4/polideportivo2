@@ -1,0 +1,32 @@
+{
+  "name": "Penalizacion",
+  "fields": [
+    {
+      "fieldName": "motivo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "totalAPagar",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "penalizacion",
+      "relationshipName": "cliente",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "penalizacion",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220202085624"
+}

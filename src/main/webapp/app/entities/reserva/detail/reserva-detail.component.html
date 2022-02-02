@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="reserva">
+      <h2 data-cy="reservaDetailsHeading"><span jhiTranslate="polideportivo2App.reserva.detail.title">Reserva</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ reserva.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.fecha">Fecha</span></dt>
+        <dd>
+          <span>{{ reserva.fecha | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.hora">Hora</span></dt>
+        <dd>
+          <span>{{ reserva.hora }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.tipoPago">Tipo Pago</span></dt>
+        <dd>
+          <span>{{ reserva.tipoPago }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.total">Total</span></dt>
+        <dd>
+          <span>{{ reserva.total }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.registros">Registros</span></dt>
+        <dd>
+          <div *ngIf="reserva.registros">
+            <a [routerLink]="['/registro-material-utilizado', reserva.registros?.id, 'view']">{{ reserva.registros?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.instalacion">Instalacion</span></dt>
+        <dd>
+          <div *ngIf="reserva.instalacion">
+            <a [routerLink]="['/instalacion', reserva.instalacion?.id, 'view']">{{ reserva.instalacion?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.reserva.cliente">Cliente</span></dt>
+        <dd>
+          <div *ngIf="reserva.cliente">
+            <a [routerLink]="['/cliente', reserva.cliente?.id, 'view']">{{ reserva.cliente?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/reserva', reserva.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

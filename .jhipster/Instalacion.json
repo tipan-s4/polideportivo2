@@ -1,0 +1,48 @@
+{
+  "name": "Instalacion",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precioPorHora",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "disponible",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "horario",
+      "otherEntityRelationshipName": "instalacion",
+      "relationshipName": "horario"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "material",
+      "otherEntityRelationshipName": "instalaciones",
+      "relationshipName": "materiales"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "instalacion",
+      "relationshipName": "reservas",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "instalacion",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220202085619"
+}

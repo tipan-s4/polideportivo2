@@ -7,6 +7,13 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "instalacion": "Instalacion",
+        "material": "Material",
+        "registroMaterialUtilizado": "Registro Material Utilizado",
+        "cliente": "Cliente",
+        "reserva": "Reserva",
+        "penalizacion": "Penalizacion",
+        "horario": "Horario",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

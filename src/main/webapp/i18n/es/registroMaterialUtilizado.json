@@ -1,0 +1,28 @@
+{
+  "polideportivo2App": {
+    "registroMaterialUtilizado": {
+      "home": {
+        "title": "Registro Material Utilizados",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Registro Material Utilizado",
+        "createOrEditLabel": "Crear o editar Registro Material Utilizado",
+        "notFound": "Ningún Registro Material Utilizados encontrado"
+      },
+      "created": "Un nuevo Registro Material Utilizado ha sido creado con el identificador {{ param }}",
+      "updated": "Un Registro Material Utilizado ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Registro Material Utilizado ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Registro Material Utilizado {{ id }}?"
+      },
+      "detail": {
+        "title": "Registro Material Utilizado"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "cantidad": "Cantidad",
+      "fecha": "Fecha",
+      "reserva": "Reserva",
+      "material": "Material"
+    }
+  }
+}

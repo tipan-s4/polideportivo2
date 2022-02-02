@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Polideportivo2App<polideportivo-2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.mycompany.myapp.Polideportivo2App",
+            "projectName": "polideportivo-2",
+            "args": ""
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="registroMaterialUtilizado">
+      <h2 data-cy="registroMaterialUtilizadoDetailsHeading">
+        <span jhiTranslate="polideportivo2App.registroMaterialUtilizado.detail.title">Registro Material Utilizado</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ registroMaterialUtilizado.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.registroMaterialUtilizado.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ registroMaterialUtilizado.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.registroMaterialUtilizado.cantidad">Cantidad</span></dt>
+        <dd>
+          <span>{{ registroMaterialUtilizado.cantidad }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.registroMaterialUtilizado.fecha">Fecha</span></dt>
+        <dd>
+          <span>{{ registroMaterialUtilizado.fecha | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.registroMaterialUtilizado.material">Material</span></dt>
+        <dd>
+          <div *ngIf="registroMaterialUtilizado.material">
+            <a [routerLink]="['/material', registroMaterialUtilizado.material?.id, 'view']">{{ registroMaterialUtilizado.material?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/registro-material-utilizado', registroMaterialUtilizado.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

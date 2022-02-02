@@ -1,0 +1,28 @@
+{
+  "polideportivo2App": {
+    "material": {
+      "home": {
+        "title": "Materials",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Material",
+        "createOrEditLabel": "Crear o editar Material",
+        "notFound": "Ningún Materials encontrado"
+      },
+      "created": "Un nuevo Material ha sido creado con el identificador {{ param }}",
+      "updated": "Un Material ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Material ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Material"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "cantidadReservada": "Cantidad Reservada",
+      "cantidadDisponible": "Cantidad Disponible",
+      "registro": "Registro",
+      "instalaciones": "Instalaciones"
+    }
+  }
+}

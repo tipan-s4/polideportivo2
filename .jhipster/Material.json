@@ -1,0 +1,41 @@
+{
+  "name": "Material",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cantidadReservada",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cantidadDisponible",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "registroMaterialUtilizado",
+      "otherEntityRelationshipName": "material",
+      "relationshipName": "registro"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "instalacion",
+      "otherEntityRelationshipName": "materiales",
+      "relationshipName": "instalaciones"
+    }
+  ],
+  "entityTableName": "material",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220202085620"
+}

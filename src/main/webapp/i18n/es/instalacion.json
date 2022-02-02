@@ -1,0 +1,29 @@
+{
+  "polideportivo2App": {
+    "instalacion": {
+      "home": {
+        "title": "Instalacions",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Instalacion",
+        "createOrEditLabel": "Crear o editar Instalacion",
+        "notFound": "Ningún Instalacions encontrado"
+      },
+      "created": "Un nuevo Instalacion ha sido creado con el identificador {{ param }}",
+      "updated": "Un Instalacion ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Instalacion ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Instalacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Instalacion"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "precioPorHora": "Precio Por Hora",
+      "disponible": "Disponible",
+      "horario": "Horario",
+      "materiales": "Materiales",
+      "reservas": "Reservas"
+    }
+  }
+}

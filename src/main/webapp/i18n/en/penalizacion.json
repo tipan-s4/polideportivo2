@@ -1,0 +1,26 @@
+{
+  "polideportivo2App": {
+    "penalizacion": {
+      "home": {
+        "title": "Penalizacions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Penalizacion",
+        "createOrEditLabel": "Create or edit a Penalizacion",
+        "notFound": "No Penalizacions found"
+      },
+      "created": "A new Penalizacion is created with identifier {{ param }}",
+      "updated": "A Penalizacion is updated with identifier {{ param }}",
+      "deleted": "A Penalizacion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Penalizacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Penalizacion"
+      },
+      "id": "ID",
+      "motivo": "Motivo",
+      "totalAPagar": "Total A Pagar",
+      "cliente": "Cliente"
+    }
+  }
+}

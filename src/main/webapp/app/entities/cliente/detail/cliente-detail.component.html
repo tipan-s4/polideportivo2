@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="cliente">
+      <h2 data-cy="clienteDetailsHeading"><span jhiTranslate="polideportivo2App.cliente.detail.title">Cliente</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ cliente.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.dni">Dni</span></dt>
+        <dd>
+          <span>{{ cliente.dni }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ cliente.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.apellidos">Apellidos</span></dt>
+        <dd>
+          <span>{{ cliente.apellidos }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.telefono">Telefono</span></dt>
+        <dd>
+          <span>{{ cliente.telefono }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.direccion">Direccion</span></dt>
+        <dd>
+          <span>{{ cliente.direccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.edad">Edad</span></dt>
+        <dd>
+          <span>{{ cliente.edad }}</span>
+        </dd>
+        <dt><span jhiTranslate="polideportivo2App.cliente.penalizacion">Penalizacion</span></dt>
+        <dd>
+          <div *ngIf="cliente.penalizacion">
+            <a [routerLink]="['/penalizacion', cliente.penalizacion?.id, 'view']">{{ cliente.penalizacion?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/cliente', cliente.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
